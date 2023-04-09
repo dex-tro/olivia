@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    color: #ffffff;
+    padding: .5em 2em .5em 2em;
+    z-index: 3;
+}
+#nav .logo a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 600;
+    color: #3E8B72;
+    user-select: none;
+}
+
+#landing-page{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background: url(images/annie-spratt-g9KFpAfQ5bc-unsplash.jpg) no-repeat;
+    background-size:cover;
+}
+
+.ham{
+    cursor: pointer;
+    user-select: none;
+}
+
+.landing-text{
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    margin-left: 400px;
+    user-select: none;
+}
+
+.landing-text h1{
+    font-size: 4em;
+}
+
+button{
+    background-color: transparent;
+    width: 120px;
+    margin-top: 2em;
+    border: 4px solid #3E8B72;
+    padding: .5em;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.landing-overlay{
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.display{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121218;
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    z-index: 5;
+    transition: ease-in-out .8s;
+}
+
+
+.display-photo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #706d6d;
+    background-image: url(images/edward-cisneros-_H6wpor9mjs-unsplash.jpg);
+    background-size: cover;
+    margin-top: 50px;
+    transition:ease-in-out 1s;
+}
+.nav-items{
+    transition: all 1s ease;
+}
+
+.nav-items .nav-links ul{
+    list-style: none;
+    margin-top: 5em;
+}
+#nav .ham{
+    transform: translateY(-500px);
+    transition: all 1s ease;
+}
+
+@media only screen and (max-width:1200px){
+    .display{
+        width: 0;
+    }
+    .display-name{
+        transform: translateX(-500px);
+    }
+    .display-photo{
+        transform: translateX(-500px);
+    }
+    .nav-items{
+        transform: translateX(-500px);
+    }
+    .landing-text{
+        margin: 0;
+    }
+    
+    .landing-text h1{
+        font-size: 7vw;
+    }
+
+    #nav .ham{
+        transform: translateY(0);
+    }
+
+    .close{
+        transform: translateX(-500px);
+        color: #ffffff;
+        z-index: 7;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+        transition: all 1s ease;
+        user-select: none;
+    }
+    
+    .x-mark{
+        transform: translateX(0);
+    }
+
+}
+.display-b{
+    width: 350px;
+}
+
+@media only screen and (max-width:280px){
+    .display-b{
+        width: 250px;
+    }
+}
+
+.display-name{
+    margin-top: 25px;
+    color: #ffffff;
+    transition: all 1s ease;
+    font-weight: 600;
+}
+
+.collapse{
+    transform: translateX(0);
+}
+
+.nav-items .nav-links ul li{
+    margin-bottom: 20px;
+}
+
+.nav-items .nav-links ul li a{
+    text-decoration: none;
+    color: #B4B4B4;
+    font-weight: 600;
+}
+
+.nav-items .nav-links ul li a:hover{
+    color: #3E8B72;
+}
+
